@@ -9,14 +9,16 @@ export default class extends Controller {
 
   search(event) {
     event.preventDefault()
-    const key = new Web3.PublicKey(this.inputTarget.value)
-    console.log(`key: ${key}`)
-    const connection = new Web3.Connection(Web3.clusterApiUrl('devnet'))
-    console.log(`connection: ${connection}`)
+    console.log(solanaWeb3);
+    const key = new solanaWeb3.PublicKey(this.inputTarget.value)
+    //const key = new Web3.PublicKey()
+    //console.log(`key: ${key}`)
+    const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('devnet'))
+    //console.log(`connection: ${connection}`)
 
     connection.getBalance(key).then(balance => {
       console.log('balance:  ')
-      console.log(balance / Web3.LAMPORTS_PER_SOL)
+      console.log(balance / solanaWeb3.LAMPORTS_PER_SOL)
     })
 
   }
