@@ -1,5 +1,4 @@
 import { Controller } from "@hotwired/stimulus"
-import * as Web3 from '@solana/web3.js'
 
 export default class extends Controller {
   static targets = ["input"];

@@ -3,6 +3,5 @@ class ArticlesController < ApplicationController
   end
 
   def search
-    @query = params[:query]
   end
 end
