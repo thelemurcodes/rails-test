@@ -1,0 +1,20 @@
+<div class="container text-center" data-controller="hello">
+  <form class="row g-2 justify-content-center py-5"
+  data-action="submit->hello#search">
+    <div class="col-4">
+      <input type="text"
+    class="form-control"
+    placeholder="Find wallet"
+    data-hello-target="input">
+    </div>
+    <div class="col-1">
+      <input type="submit" class="btn btn-primary">
+    </div>
+  </form>
+</div>
+
+<!-- <%= form_with url: "/", method: :get do |form| %>
+  <%= form.label :query, "Search for:" %>
+  <%= form.text_field :query %>
+  <%= form.submit "Search" %>
+<% end %>
